@@ -36,3 +36,4 @@ bin/ipget
 bin/tmp/*
 .idea
 scratchpad
+go.sum
