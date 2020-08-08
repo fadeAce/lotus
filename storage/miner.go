@@ -41,7 +41,7 @@ type Miner struct {
 	maddr  address.Address
 	worker address.Address
 
-	sealing *sealing.Sealing
+	sealing *sealing.FiltabSealing
 }
 
 type storageMinerApi interface {
@@ -106,7 +106,7 @@ func (m *Miner) Run(ctx context.Context) error {
 	evts := events.NewEvents(ctx, m.api)
 	adaptedAPI := NewSealingAPIAdapter(m.api)
 	pcp := sealing.NewBasicPreCommitPolicy(adaptedAPI, 10000000, md.PeriodStart%miner.WPoStProvingPeriod)
-	m.sealing = sealing.New(adaptedAPI, NewEventsAdapter(evts), m.maddr, m.ds, m.sealer, m.sc, m.verif, &pcp)
+	m.sealing = sealing.NewFiltabSealing(adaptedAPI, NewEventsAdapter(evts), m.maddr, m.ds, m.sealer, m.sc, m.verif, &pcp)
 
 	go m.sealing.Run(ctx) //nolint:errcheck // logged intside the function
 
