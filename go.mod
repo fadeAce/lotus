@@ -105,6 +105,7 @@ require (
 	github.com/multiformats/go-multiaddr-net v0.1.5
 	github.com/multiformats/go-multibase v0.0.3
 	github.com/multiformats/go-multihash v0.0.14
+	github.com/nats-io/nats.go v1.10.0
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/stretchr/testify v1.6.1
@@ -129,7 +130,7 @@ require (
 	launchpad.net/gocheck v0.0.0-20140225173054-000000000087 // indirect
 )
 
-replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.3
+replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.7
 
 replace github.com/golangci/golangci-lint => github.com/golangci/golangci-lint v1.18.0
 
