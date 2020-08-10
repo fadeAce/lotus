@@ -123,13 +123,13 @@ require (
 	go4.org v0.0.0-20190313082347-94abd6928b1d // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
 	golang.org/x/sys v0.0.0-20200602225109-6fdc65e7d980
-	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+	golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e
 	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
 	google.golang.org/api v0.25.0 // indirect
 	launchpad.net/gocheck v0.0.0-20140225173054-000000000087 // indirect
 )
 
-replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.2
+replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.3
 
 replace github.com/golangci/golangci-lint => github.com/golangci/golangci-lint v1.18.0
 
