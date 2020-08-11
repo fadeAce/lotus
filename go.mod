@@ -130,7 +130,7 @@ require (
 	launchpad.net/gocheck v0.0.0-20140225173054-000000000087 // indirect
 )
 
-replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.7
+replace github.com/filecoin-project/storage-fsm => ../storage-fsm
 
 replace github.com/golangci/golangci-lint => github.com/golangci/golangci-lint v1.18.0
 
