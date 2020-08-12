@@ -132,10 +132,10 @@ require (
 
 // dev option: local fsm
 //replace github.com/filecoin-project/storage-fsm => ../storage-fsm
+replace github.com/filecoin-project/storage-fsm => github.com/filtab/storage-fsm v0.0.8
 
 //replace github.com/filecoin-project/sector-storage v0.0.0-20200630180318-4c1968f62a8f =>  github.com/filtab/sector-storage v0.0.0-20200630180318-4c1968f62a8f
 
 replace github.com/golangci/golangci-lint => github.com/golangci/golangci-lint v1.18.0
 
 replace github.com/filecoin-project/filecoin-ffi => ./extern/filecoin-ffi
-
