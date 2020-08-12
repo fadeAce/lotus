@@ -27,17 +27,17 @@ setupFun(){
   # setup env
   cd "$1" || exit
   echo 'setup pre seal, local.json, run node'
-  "$1"/lotus-seed pre-seal --sector-size 2KiB --num-sectors 2 && "$1"/lotus-seed genesis new localnet.json
-  "$1"/lotus-seed genesis add-miner localnet.json ~/.genesis-sectors/pre-seal-t01000.json
-  "$1"/lotus daemon --lotus-make-genesis=dev.gen --genesis-template=localnet.json --bootstrap=false &
+  ./lotus-seed pre-seal --sector-size 2KiB --num-sectors 2 && ./lotus-seed genesis new localnet.json
+  ./lotus-seed genesis add-miner localnet.json ~/.genesis-sectors/pre-seal-t01000.json
+  ./lotus daemon --lotus-make-genesis=dev.gen --genesis-template=localnet.json --bootstrap=false &
   sleep 10s
 
   echo 'setup wallet'
-  "$1"/lotus wallet import ~/.genesis-sectors/pre-seal-t01000.key
+  ./lotus wallet import ~/.genesis-sectors/pre-seal-t01000.key
   sleep 10s
 
   echo 'setup miner'
-  "$1"/lotus-storage-miner init --genesis-miner --actor=t01000 --sector-size=2KiB --pre-sealed-sectors=~/.genesis-sectors --pre-sealed-metadata=~/.genesis-sectors/pre-seal-t01000.json --nosync
+  ./lotus-storage-miner init --genesis-miner --actor=t01000 --sector-size=2KiB --pre-sealed-sectors=~/.genesis-sectors --pre-sealed-metadata=~/.genesis-sectors/pre-seal-t01000.json --nosync
 }
 
 
